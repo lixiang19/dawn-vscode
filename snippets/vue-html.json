@@ -1,0 +1,53 @@
+{
+  "gl-table": {
+    "prefix": "gl-table\r",
+    "description": "表格\r",
+    "body": [
+      " <gl-table :tableOption=\"tableOption\" :rule=\"rule\" :tableColumns=\"tableColumns\" ref=\"table\"> </gl-table>"
+    ]
+  },
+  "gl-title": {
+    "prefix": "gl-title\r",
+    "description": "标题组件\r",
+    "body": [
+      "<gl-title title=\"$1\"></gl-title>"
+    ]
+  },
+  "v-for": {
+    "prefix": "v-for\r",
+    "description": "",
+    "body": [
+      "v-for=\"(item,index) in $1\""
+    ]
+  },
+  "register_button": {
+    "prefix": "register_button\r",
+    "description": "",
+    "body": [
+      "\r",
+      "\r",
+      "<div class=\"register_button\">\r",
+      "      <el-button type=\"primary\" icon=\"el-icon-upload\" @click=\"submitClick\"\r",
+      "        >提交</el-button\r",
+      "      >\r",
+      "      <el-button icon=\"el-icon-refresh\" @click=\"handleCancel\">取消</el-button>\r",
+      "    </div>"
+    ]
+  },
+  "gl-dialog": {
+    "prefix": "gl-dialog\r",
+    "description": "弹窗\r",
+    "body": [
+      "<gl-dialog :showViewModel.sync=\"$1.status\" title=\"$2\" wd=\"58%\" ht=\"78%\">\r",
+      "     \r",
+      "</gl-dialog>"
+    ]
+  },
+  "gl-form": {
+    "prefix": "gl-form\r",
+    "description": "表单\r",
+    "body": [
+      "<form-create :rule=\"rule\" :option=\"option\" ref=\"fc\" v-model=\"fApi\" />"
+    ]
+  }
+}

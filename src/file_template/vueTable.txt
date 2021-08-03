@@ -1,0 +1,83 @@
+<!--IDNAME-->
+<template>
+  <div id="IDNAME">
+    <gl-table :tableOption="tableOption" :rule="rule" :tableColumns="tableColumns" ref="table">
+      <template #operate>
+        <el-button type="primary" @click="handleAdd">新增</el-button>
+      </template>
+      <template v-slot="scope">
+        <el-button type="success" size="mini" @click="handleDetail(scope)">详情</el-button>
+        <el-button type="primary" size="mini" @click="handleEdit(scope)">编辑</el-button>
+        <el-button type="danger" size="mini" @click="handleDel(scope)">删除</el-button>
+      </template>
+    </gl-table>
+    <gl-dialog :showViewModel.sync="dialog.status" title="标题" wd="58%" ht="78%" @refresh="refresh"></gl-dialog>
+  </div>
+</template>
+
+<script>
+import * as api from '@/api/index'
+import * as tool from '@/utils/tool'
+import * as util from '@/utils/util'
+export default {
+  name: 'IDNAME',
+
+  components: {},
+
+  props: {},
+
+  watch: {
+
+  },
+
+  data () {
+    return {
+      dialog: {
+        status: false
+      },
+      tableOption: {
+        method: '',
+        slotWidth: '200px',
+        label: '操作'
+      },
+      tableColumns: [],
+      rule: []
+    }
+  },
+
+  computed: {},
+
+  mounted () {},
+
+  methods: {
+    handleAdd () {
+
+    },
+    handleDetail ({ index, row }) {
+
+    },
+    handleEdit ({ index, row }) {
+
+    },
+    handleDel ({ index, row }) {
+
+    },
+    refresh () {
+      this.$refs.table.refresh()
+    }
+  }
+}
+
+</script>
+<style lang='scss' scoped>
+@import "~@/assets/style/utils";
+#IDNAME {
+  height: 100%;
+  width: 100%;
+}
+@mixin bg($path) {
+}
+.simple {
+  @include bg("simple");
+}
+</style>

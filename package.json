@@ -1,0 +1,96 @@
+{
+	"name": "dawn",
+	"displayName": "dawn",
+	"description": "公司内部工具库",
+	"version": "0.1.1",
+	"publisher": "lixiang",
+	"engines": {
+		"vscode": "^1.44.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"icon": "icon.png",
+	"activationEvents": [
+		"*"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.getCurrentFilePath",
+				"title": "获取@路径"
+			},
+			{
+				"command": "extension.createNewVue",
+				"title": "新建vue模板"
+			},
+			{
+				"command": "extension.createNewVueTable",
+				"title": "新建vue表格模板"
+			},
+			{
+				"command": "extension.createNewVueForm",
+				"title": "新建vue表单模板"
+			},
+			{
+				"command": "extension.testCommand",
+				"title": "测试command命令效果"
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"command": "extension.getCurrentFilePath",
+					"group": "navigation"
+				},
+				{
+					"command": "extension.createNewVue",
+					"group": "dawn_commands"
+				},
+				{
+					"command": "extension.createNewVueTable",
+					"group": "dawn_commands"
+				},
+				{
+					"command": "extension.createNewVueForm",
+					"group": "dawn_commands"
+				}
+			]
+		},
+		"snippets": [
+			{
+				"language": "javascript",
+				"path": "./snippets/javascript.json"
+			},
+			{
+				"language": "scss",
+				"path": "./snippets/scss.json"
+			},
+			{
+				"language": "vue-html",
+				"path": "./snippets/vue-html.json"
+			}
+		]
+	},
+	"scripts": {
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.7",
+		"@types/node": "^12.11.7",
+		"@types/vscode": "^1.44.0",
+		"eslint": "^6.8.0",
+		"eslint-config-standard": "^14.1.1",
+		"eslint-plugin-import": "^2.20.2",
+		"eslint-plugin-node": "^11.1.0",
+		"eslint-plugin-promise": "^4.2.1",
+		"eslint-plugin-standard": "^4.0.1",
+		"eslint-plugin-vue": "^6.2.2",
+		"glob": "^7.1.5",
+		"mocha": "^6.2.2",
+		"typescript": "^3.6.4",
+		"vscode-test": "^1.2.2"
+	}
+}

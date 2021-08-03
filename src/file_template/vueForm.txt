@@ -1,0 +1,77 @@
+<!--IDNAME-->
+<template>
+  <div id="IDNAME">
+    <form-create :rule="rule" :option="option" ref="fc" v-model="fApi" />
+    <div class="register_button">
+      <el-button type="primary" icon="el-icon-upload" @click="submitClick">提交</el-button>
+      <!-- <el-button icon="el-icon-refresh" @click="handleCancel">取消</el-button> -->
+    </div>
+  </div>
+</template>
+
+<script>
+import * as api from '@/api/index'
+import * as tool from '@/utils/tool'
+import * as util from '@/utils/util'
+import promtMixin from '@/utils/mixin/promtMixin'
+import formMixin from '@/utils/mixin/formMixin'
+import selectMixin from '@/utils/mixin/selectMixin'
+export default {
+  name: 'IDNAME',
+
+  mixins: [promtMixin, formMixin, selectMixin],
+
+  components: {},
+
+  props: {},
+
+  watch: {
+
+  },
+
+  data () {
+    return {
+      fApi: { },
+      option: {
+        form: {
+          labelPosition: 'left'
+        },
+        row: {
+          justify: 'start',
+          gutter: 20
+        },
+        submitBtn: {
+          show: false
+        }
+      },
+      rule: []
+    }
+  },
+
+  computed: {},
+
+  mounted () {},
+
+  methods: {
+    submitClick () {
+
+    }
+    // handleCancel () {
+
+    // }
+  }
+}
+
+</script>
+<style lang='scss' scoped>
+@import "~@/assets/style/utils";
+#IDNAME {
+  height: 100%;
+  width: 100%;
+}
+@mixin bg($path) {
+}
+.simple {
+  @include bg("simple");
+}
+</style>

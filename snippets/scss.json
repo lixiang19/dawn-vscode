@@ -1,0 +1,18 @@
+{
+  "grid-col": {
+    "prefix": "grid-col\r",
+    "description": "",
+    "body": [
+      "@include grid-col($1,0);"
+    ]
+  },
+  "grid-row": {
+    "prefix": "grid-row\r",
+    "description": "",
+    "body": [
+      "\r",
+      "@include grid-row($1,0);\r",
+      ""
+    ]
+  }
+}

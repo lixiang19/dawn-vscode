@@ -1,0 +1,366 @@
+{
+  "form-input": {
+    "prefix": "f-input\r",
+    "description": "form-input\r",
+    "body": [
+      "{\r",
+      "  type: 'input',\r",
+      "  title: '$1',\r",
+      "  field: '',\r",
+      "  value: '',\r",
+      "  props: {\r",
+      "    clearable: true\r",
+      "  },\r",
+      "  col: {\r",
+      "    span: ${2|6,8,12,24|}\r",
+      "  },\r",
+      "  validate: [\r",
+      "    { required: true, message: '请输入', trigger: 'blur' }\r",
+      "  ]\r",
+      "},"
+    ]
+  },
+  "form-radio": {
+    "prefix": "f-radio\r",
+    "description": "form-radio\r",
+    "body": [
+      "{\r",
+      "  type: 'radio',\r",
+      "  title: '$1',\r",
+      "  field: '',\r",
+      "  value: '0',\r",
+      "  options: [\r",
+      "      { value: '0', label: '$2' },\r",
+      "      { value: '1', label: '$3' }\r",
+      "  ],\r",
+      "   col: {\r",
+      "    span: ${2|6,8,12,24|}\r",
+      "  },\r",
+      "\r",
+      "  validate: [\r",
+      "    { required: true, message: '请输入', trigger: 'blur' }\r",
+      "  ]\r",
+      "},"
+    ]
+  },
+  "form-input-area": {
+    "prefix": "f-area\r",
+    "description": "form-input-area\r",
+    "body": [
+      "{\r",
+      "  type: 'input',\r",
+      "  title: '$1',\r",
+      "  field: '',\r",
+      "  value: '',\r",
+      "  props: {\r",
+      "    clearable: true,\r",
+      "    type: 'textarea',\r",
+      "    autosize: {\r",
+      "      minRows: 2\r",
+      "    }\r",
+      "  },\r",
+      "  col: {\r",
+      "    span: ${2|6,8,12,24|}\r",
+      "  },\r",
+      "  validate: [\r",
+      "    { required: true, message: '请输入', trigger: 'blur' }\r",
+      "  ]\r",
+      "}"
+    ]
+  },
+  "form-inputNumber": {
+    "prefix": "f-inputNumber\r",
+    "description": "form-inputNumber\r",
+    "body": [
+      "{\r",
+      "  type: 'InputNumber',\r",
+      "  title: '$1',\r",
+      "  field: '',\r",
+      "  value: 0,\r",
+      "  props: {\r",
+      "    precision: 2\r",
+      "  },\r",
+      "  col: {\r",
+      "    span: ${2|6,8,12,24|}\r",
+      "  },\r",
+      "  validate: [\r",
+      "    { required: true, message: '请输入', trigger: 'blur' }\r",
+      "  ]\r",
+      "},"
+    ]
+  },
+  "form-autoComplete": {
+    "prefix": "f-autoComplete\r",
+    "description": "form-autoComplete\r",
+    "body": [
+      "{\r",
+      "  type: 'glAutocomplete',\r",
+      "  title: '在押人员姓名',\r",
+      "  field: 'prisonerName',\r",
+      "  value: '',\r",
+      "  props: {\r",
+      "    triggerOnFocus: false,\r",
+      "    clearable: true,\r",
+      "  },\r",
+      "  col: {\r",
+      "    span: ${3|6,8,12,24|}\r",
+      "  },\r",
+      "  validate: [\r",
+      "    { required: true, message: '请输入', trigger: 'blur' }\r",
+      "  ]\r",
+      "},"
+    ]
+  },
+  "form-checkbox": {
+    "prefix": "f-checkbox\r",
+    "description": "form-checkbox\r",
+    "body": [
+      "{\r",
+      "  type: 'checkbox',\r",
+      "  title: '$1',\r",
+      "  field: '',\r",
+      "  value: [],\r",
+      "  options: [\r",
+      "    { value: '', label: '$2' },\r",
+      "    { value: '', label: '%3' }\r",
+      "  ,\r]",
+      "  props: {\r",
+      "\r",
+      "  },\r",
+      "  col: {\r",
+      "    span: ${4|6,8,12,24|}\r",
+      "  },\r",
+      "  validate: [\r",
+      "    { required: true, message: '请输入', trigger: 'blur' }\r",
+      "  ]\r",
+      "},"
+    ]
+  },
+  "form-select": {
+    "prefix": "f-select\r",
+    "description": "form-select\r",
+    "body": [
+      "{\r",
+      "  type: 'select',\r",
+      "  title: '$1',\r",
+      "  field: '',\r",
+      "  value: '',\r",
+      "  options: [\r",
+      "    { value: '', label: '$2' },\r",
+      "    { value: '', label: '$3' }\r",
+      "   ],\r",
+      "   col: {\r",
+      "    span: ${4|6,8,12,24|}\r",
+      "  },\r",
+      "  props: {\r",
+      "\r",
+      "  },\r",
+      "  validate: [\r",
+      "    { required: true, message: '请输入', trigger: 'blur' }\r",
+      "  ]\r",
+      "},"
+    ]
+  },
+  "form-cascader": {
+    "prefix": "f-cascader\r",
+    "description": "form-cascader\r",
+    "body": [
+      "{\r",
+      "  type: 'cascader',\r",
+      "  title: '$1',\r",
+      "  field: '',\r",
+      "  value: [],\r",
+      "  props: {\r",
+      "  options: [],\r",
+      "  props: {\r",
+      "    value: '',\r",
+      "    label: '',\r",
+      "    children: ''\r",
+      "    }\r",
+      "  },\r",
+      "  col: {\r",
+      "    span: ${2|6,8,12,24|}\r",
+      "  },\r",
+      "  validate: [\r",
+      "    { required: true, message: '请选择', trigger: 'blur' }\r",
+      "  ]\r",
+      "},"
+    ]
+  },
+  "form-datePicker": {
+    "prefix": "f-datePicker\r",
+    "description": "form-datePicker\r",
+    "body": [
+      "{\r",
+      "  type: 'DatePicker',\r",
+      "  title: '$1',\r",
+      "  field: '',\r",
+      "  value: '',\r",
+      "  props: {\r",
+      "    type: 'date',\r",
+      "    format: 'yyyy-MM-dd',\r",
+      "    placeholder: '请选择日期'\r",
+      "  },\r",
+      "  col: {\r",
+      "    span: ${2|6,8,12,24|}\r",
+      "  },\r",
+      "  validate: [\r",
+      "    { required: true, message: '请输入', trigger: 'blur' }\r",
+      "  ]\r",
+      "},"
+    ]
+  },
+  "form-dateTimePicker": {
+    "prefix": "f-dateTimePicker\r",
+    "description": "form-dateTimePicker\r",
+    "body": [
+      "{\r",
+      "  type: 'DatePicker',\r",
+      "  title: '$1',\r",
+      "  field: '',\r",
+      "  value: '',\r",
+      "  props: {\r",
+      "    type: 'datetime',\r",
+      "    placeholder: '请选择日期和时间'\r",
+      "  },\r",
+      "  col: {\r",
+      "    span: ${2|6,8,12,24|}\r",
+      "  },\r",
+      "  validate: [\r",
+      "    { required: true, message: '请选择', trigger: 'blur' }\r",
+      "  ]\r",
+      "},"
+    ]
+  },
+  "form-upload": {
+    "prefix": "f-upload\r",
+    "description": "form-upload\r",
+    "body": [
+      " {\r",
+      "  type: 'glUpload',\r",
+      "  title: '$1',\r",
+      "  field: '$2',\r",
+      "  value: '',\r",
+      "  props: {\r",
+      "  \r",
+      "  },\r",
+      "  col: {\r",
+      "    span: 24\r",
+      "  },\r",
+      "  validate: [\r",
+      "    { required: true, message: '请输入', trigger: 'blur' }\r",
+      "  ]\r",
+      "}"
+    ]
+  },
+  "gl-table": {
+    "prefix": "gl-table\r",
+    "description": "",
+    "body": [
+      "tableOption: {\r",
+      "  method: '',\r",
+      "    slotWidth: '100px'\r",
+      "},\r",
+      "rule: [\r",
+      "],\r",
+      "  tableColumns: [\r",
+      "    {\r",
+      "      prop: '',\r",
+      "      label: ''\r",
+      "    }\r",
+      "  ]"
+    ]
+  },
+  "api": {
+    "prefix": "api\r",
+    "description": "",
+    "body": [
+      "import * as api from '@/api/index'"
+    ]
+  },
+  "formData": {
+    "prefix": "form-Data\r",
+    "description": "",
+    "body": [
+      "const $f = this.fApi\r",
+      "const formData = $f.formData()"
+    ]
+  },
+  "form-reset": {
+    "prefix": "form-reset\r",
+    "description": "",
+    "body": [
+      "handleReset() {\r",
+      "  const $f = this.fApi\r",
+      "  $f.resetFields()\r",
+      "},"
+    ]
+  },
+  "mixin-promt-imp": {
+    "prefix": "mixin-promt-imp\r",
+    "description": "",
+    "body": [
+      "import promtMixin from '@/utils/mixin/promtMixin'"
+    ]
+  },
+  "mixin-promt-mixin": {
+    "prefix": "mixin-promt-mixin\r",
+    "description": "",
+    "body": [
+      "\r",
+      "mixins: [promtMixin],"
+    ]
+  },
+  "f-hidden": {
+    "prefix": "f-hidden\r",
+    "description": "",
+    "body": [
+      "{\r",
+      "  type: 'hidden',\r",
+      "  value: '',\r",
+      "  field: '$1'\r",
+      "},"
+    ]
+  },
+  "form-rule": {
+    "prefix": "form-rule\r",
+    "description": "",
+    "body": [
+      "fApi: { },\r",
+      "option: {\r",
+      "  form: {\r",
+      "    labelPosition: 'left'\r",
+      "  },\r",
+      "  row: {\r",
+      "    justify: 'start',\r",
+      "      gutter: 20\r",
+      "  },\r",
+      "  submitBtn: {\r",
+      "    show: false\r",
+      "  }\r",
+      "},\r",
+      "rule: []"
+    ]
+  },
+  "form-time": {
+    "prefix": "form-time\r",
+    "description": "",
+    "body": [
+      "{\r",
+      "  type: 'TimePicker',\r",
+      "  title: '$1',\r",
+      "  field: '',\r",
+      "  value: '',\r",
+      "  props: {\r",
+      "    placeholder: '请选择时间'\r",
+      "  },\r",
+      "  col: {\r",
+      "    span: ${2|6,8,12,24|}\r",
+      "  },\r",
+      "  validate: [\r",
+      "    { required: true, message: '请选择', trigger: 'blur' }\r",
+      "  ]\r",
+      "},"
+    ]
+  }
+}
