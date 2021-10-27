@@ -7,8 +7,11 @@ const vscode = require('vscode')
 exports.activate = function (context) {
   console.log('插件运行了')
   require('./src/getCurrentFilePath')(context)
+  require('./src/getFolderAllPath')(context)
   require('./src/createNewVue')(context)
   require('./src/testCommand')(context)
+  require('./src/booster')(context)
+  require('./src/booster/createNewTask')(context)
 }
 
 /**

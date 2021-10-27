@@ -1,46 +1,22 @@
 <!--IDNAME-->
-<template>
-  <div id="IDNAME"></div>
-</template>
-
 <script>
-import * as api from '@/api/index'
-import * as tool from '@/utils/tool'
-import * as util from '@/utils/util'
 export default {
   name: 'IDNAME',
-
   components: {},
-
   props: {},
-
-  watch: {
-    
-  },
-  
-  data () {
+  setup () {
     return {
+
     }
-  },
-
-  computed: {},
-
-  mounted () {},
-
-  methods: {}
+  }
 }
 
 </script>
-<style lang='scss' scoped>
-@import "~@/assets/style/utils";
-#IDNAME {
-  height: 100%;
-  width: 100%;
-}
-@mixin bg($path) {
- 
-}
-.simple {
-  @include bg("simple");
-}
+
+<template lang="pug">
+#IDNAME
+</template>
+<style lang='stylus'>
+#IDNAME
+
 </style>

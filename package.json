@@ -2,7 +2,7 @@
 	"name": "dawn",
 	"displayName": "dawn",
 	"description": "公司内部工具库",
-	"version": "0.1.1",
+	"version": "0.1.4",
 	"publisher": "lixiang",
 	"engines": {
 		"vscode": "^1.44.0"
@@ -16,22 +16,43 @@
 	],
 	"main": "./extension.js",
 	"contributes": {
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "package-explorer",
+					"title": "辅助插件集",
+					"icon": "icon.svg"
+				}
+			]
+		},
+		"views": {
+			"package-explorer": [
+				{
+					"id": "booster",
+					"name": "工具集"
+				}
+			]
+		},
 		"commands": [
 			{
 				"command": "extension.getCurrentFilePath",
-				"title": "获取@路径"
+				"title": "获取别名路径"
+			},
+			{
+				"command": "extension.getFolderAllPath",
+				"title": "生成目录下所有文件数组"
 			},
 			{
 				"command": "extension.createNewVue",
 				"title": "新建vue模板"
 			},
 			{
-				"command": "extension.createNewVueTable",
-				"title": "新建vue表格模板"
+				"command": "extension.createNewTemplate",
+				"title": "新建任务模板"
 			},
 			{
-				"command": "extension.createNewVueForm",
-				"title": "新建vue表单模板"
+				"command": "extension.createNewTask",
+				"title": "新建任务模版"
 			},
 			{
 				"command": "extension.testCommand",
@@ -42,36 +63,19 @@
 			"explorer/context": [
 				{
 					"command": "extension.getCurrentFilePath",
-					"group": "navigation"
-				},
-				{
-					"command": "extension.createNewVue",
 					"group": "dawn_commands"
 				},
 				{
-					"command": "extension.createNewVueTable",
+					"command": "extension.getFolderAllPath",
 					"group": "dawn_commands"
 				},
 				{
-					"command": "extension.createNewVueForm",
+					"command": "extension.createNewTemplate",
 					"group": "dawn_commands"
 				}
 			]
 		},
-		"snippets": [
-			{
-				"language": "javascript",
-				"path": "./snippets/javascript.json"
-			},
-			{
-				"language": "scss",
-				"path": "./snippets/scss.json"
-			},
-			{
-				"language": "vue-html",
-				"path": "./snippets/vue-html.json"
-			}
-		]
+		"snippets": []
 	},
 	"scripts": {
 		"test": "node ./test/runTest.js"
